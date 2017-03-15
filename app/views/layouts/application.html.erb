@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Meower</title>
+        <%= csrf_meta_tags %>
+
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
+
+    <body>
+        <div class="container">
+            <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- <a class="navbar-brand" href="#">Meower</a> -->
+                <%= link_to "Meower", root_path, class: "navbar-brand" %>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                        <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+                    </form>
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                              <%= link_to "Home", root_path, class: "nav-link" %>
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <%= link_to "Profile", profiles_show_path, class: "nav-link" %>
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Meows</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <% if user_signed_in? %>
+                        <li>
+                            <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+                            <strong>Current logged in User ID: </strong>
+                            <%= current_user.id %>
+                        </li>
+                    <% else %>
+                        <li>
+                            <%= link_to('Login', new_user_session_path)  %>
+                        </li>
+                        <% end %>
+                    </ul>
+
+                </div>
+            </nav>
+            <% if notice == 'Meow was successfully created.' %>
+            <p id="notice" class="alert alert-success"><%= notice %></p>
+            <% elsif notice == 'Meow was successfully destroyed.'%>
+            <p id="notice" class="alert alert-warning"><%= notice %></p>
+            <% elsif notice == 'Meow was successfully updated.'%>
+            <p id="notice" class="alert alert-info"><%= notice %></p>
+            <% end %>
+            <%= yield %>
+        </div>
+    </body>
+</html>

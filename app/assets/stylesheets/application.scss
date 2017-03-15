@@ -1,0 +1,12 @@
+@import "bootstrap";
+
+
+.unlike-btn {
+  @extend .btn ;
+  @extend .btn-warning;
+}
+
+.like-btn {
+  @extend .btn;
+  @extend .btn-success;
+}
