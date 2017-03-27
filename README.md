@@ -15,3 +15,15 @@ The gems used:
 * Materialize SASS
 * socialization
 * devise
+
+### Overview view
+
+![Overview](https://github.com/samturner3/CFA-Meower_Twitter_Clone/blob/master/docs/Meower%20Overview.png)
+
+### Users view
+
+![Users](https://github.com/samturner3/CFA-Meower_Twitter_Clone/blob/master/docs/Meower%20Users.png)
+
+### Meow view
+
+![Meow](https://github.com/samturner3/CFA-Meower_Twitter_Clone/blob/master/docs/Meower%20View%20Meow.png)
