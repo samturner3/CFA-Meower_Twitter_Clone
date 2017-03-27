@@ -1,24 +1,17 @@
-# README
+# Meower
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Twitter simulation project. 
 
-Things you may want to cover:
+It was constructed using rails and we used postgresql as the database of choice.
 
-* Ruby version
+The main objective of this porject was to create an application that allows users to 
+* log in/out, 
+* post text 
+* follow other users and 
+* like peoples posts. 
 
-* System dependencies
+The gems used:
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Materialize SASS
+* socialization
+* devise
